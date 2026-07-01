@@ -1,0 +1,221 @@
+.ach-tabs {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin-bottom: 2.5rem;
+}
+
+.ach-tab {
+    padding: 0.5rem 1.25rem;
+    border-radius: var(--radius-full);
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--text-muted);
+    background-color: var(--bg-card);
+    border: 1px solid var(--border-color);
+    transition: all var(--transition);
+}
+
+.ach-tab:hover {
+    color: var(--accent);
+    border-color: var(--accent);
+    background-color: var(--accent-light);
+}
+
+.ach-tab.active {
+    background-color: var(--accent);
+    color: #ffffff;
+    border-color: var(--accent);
+    box-shadow: var(--shadow-sm);
+}
+
+[data-theme="light"] .ach-tab.active {
+    color: #1a1d1a;
+}
+
+.ach-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.1rem;
+}
+
+.ach-card {
+    background-color: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-sm);
+    padding: 1.1rem 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+    transition: all var(--transition);
+}
+
+.ach-card:hover {
+    border-color: var(--accent);
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-sm);
+}
+
+.ach-card.hidden {
+    display: none !important;
+}
+
+.ach-card-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+
+.ach-badge {
+    font-size: 0.7rem;
+    font-weight: 600;
+    padding: 0.2rem 0.55rem;
+    border-radius: 4px;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+}
+
+.badge-mc {
+    background-color: rgba(139, 199, 130, 0.15);
+    color: var(--accent);
+}
+
+.badge-bot {
+    background-color: rgba(114, 137, 218, 0.15);
+    color: #7289da;
+}
+
+.badge-group {
+    background-color: rgba(235, 160, 89, 0.15);
+    color: #eba059;
+}
+
+.ach-date {
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: var(--text-muted);
+}
+
+.ach-card-title {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: var(--text-main);
+    line-height: 1.4;
+    word-break: break-word;
+}
+
+.ach-card-desc {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    line-height: 1.6;
+    flex: 1;
+}
+
+.ach-more-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+.ach-more-btn {
+    padding: 0.6rem 1.8rem;
+    font-size: 0.9rem;
+    font-weight: 600;
+    border-radius: var(--radius-full);
+    background-color: var(--bg-card);
+    color: var(--accent);
+    border: 1.5px solid var(--accent);
+    cursor: pointer;
+    transition: all var(--transition);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    box-shadow: var(--shadow-sm);
+}
+
+.ach-more-btn:hover {
+    background-color: var(--accent);
+    color: #ffffff;
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+}
+
+.ach-more-btn.hidden {
+    display: none !important;
+}
+
+.timeline-connected {
+    position: relative;
+    padding-left: 32px;
+    display: flex;
+    flex-direction: column;
+    gap: 1.75rem;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.timeline-connected::before {
+    content: '';
+    position: absolute;
+    top: 15px;
+    bottom: 15px;
+    left: 7px;
+    width: 2px;
+    background: linear-gradient(180deg, var(--accent) 0%, rgba(139, 199, 130, 0.2) 100%);
+}
+
+.timeline-node {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+    background-color: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-md);
+    padding: 1.25rem 1.5rem;
+    transition: all var(--transition);
+}
+
+.timeline-node:hover {
+    border-color: var(--accent);
+    transform: translateX(4px);
+    box-shadow: var(--shadow-sm);
+}
+
+.timeline-node::before {
+    content: '';
+    position: absolute;
+    left: -32px;
+    top: 1.3rem;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background-color: var(--bg-card);
+    border: 3px solid var(--accent);
+    box-shadow: 0 0 0 4px var(--bg-main), 0 0 8px rgba(139, 199, 130, 0.5);
+    z-index: 2;
+    transition: all var(--transition);
+}
+
+.timeline-node:hover::before {
+    background-color: var(--accent);
+    box-shadow: 0 0 0 4px var(--bg-main), 0 0 12px var(--accent);
+}
+
+.timeline-date {
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: var(--accent);
+    letter-spacing: 0.03em;
+}
+
+.timeline-title {
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: var(--text-main);
+    line-height: 1.4;
+    margin: 0;
+}
